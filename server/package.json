@@ -1,0 +1,58 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Task manager server",
+  "main": "src/app.ts",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/app.js\"",
+    "build": "tsc"
+  },
+  "author": "koecha",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^18.7.15",
+    "concurrently": "^7.4.0",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  },
+  "dependencies": {
+    "@socket.io/sticky": "^1.0.3",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.9.0",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.3",
+    "mongoose": "^6.6.1",
+    "socket.io": "^4.5.2",
+    "socket.io-redis": "^6.1.1",
+    "uuid": "^9.0.0"
+  },
+  "_moduleAliases": {
+    "@src": "dist",
+    "@database": "dist/database",
+    "@models": "dist/models",
+    "@middlewares": "dist/middlewares",
+    "@config": "dist/config",
+    "@utils": "dist/utils",
+    "@services": "dist/services",
+    "@routes": "dist/routes",
+    "@controllers": "dist/controllers",
+    "@firebase": "dist/firebase",
+    "@webhook": "dist/webhook",
+    "@subscribers": "dist/subscribers"
+  }
+}
